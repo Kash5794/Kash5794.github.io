@@ -1,1 +1,907 @@
-Hello world
+<!DOCTYPE html>
+<html>
+<head lang="en-US">
+
+<title>Kazeem Saheed Portfolio Portal</title>
+<meta charset="utf-8"name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<style>
+
+header{
+    background-color: rgb(58, 32, 63);
+    color: white;
+    display:flex;
+    overflow: hidden;
+    padding: 25px;
+    font-family: Cambria;
+    font-size: 20px
+}
+section{
+    font-size: 15px;
+    font-family: Arial;
+    background-image: url("background1.jpg") ;
+    padding: 20px;
+    background-size: cover;
+    
+    
+}
+h3, h4,p,div{
+    font-size: 15px;
+}
+#green{
+
+    display: block;
+    margin-right: auto;
+    margin-left:auto;
+    
+    transition: height 1s linear;
+}
+
+.sectionDiv{
+    
+color:white;
+margin-top: 20px;
+margin-left:10%;margin-right:10%;
+padding:20px;text-align: justify; 
+box-shadow: 5px 5px 5px 5px black;  
+
+}
+
+.sectionDiv2{
+margin-left:10%;margin-right:10%;margin-top: 20px;
+ padding:20px;
+ background-color: rgb(237, 242, 243);
+ box-shadow: 3px 3px 3px 3px black;
+ border-radius: 10px;
+color: white;
+display: flex;
+ 
+}
+.frontend{
+    
+width: 300px;
+height: 20px;
+ background-color:rgb(58, 126, 143);
+ text-align: center;
+ margin-bottom: 20px;
+ margin-bottom: 20px; 
+ cursor: pointer; 
+ margin-right: auto;margin-left:auto;
+ display: block;
+transition: height 1s linear; 
+ 
+    
+}
+.frontendDiv{
+display: none; 
+
+}
+.sectionDiv3{
+
+color: white;margin-left:10%;margin-top: 50px;
+ 
+}
+
+footer{
+   background-color:rgb(5, 1, 34);
+    font-size: 10px;
+    font-family: Cambria;
+    color: white;
+
+    
+}
+
+.footerDiv{
+    background-color:rgb(5, 1, 34);
+    margin-right: 10%;
+    margin-left: 10%;
+    display: flex;
+   
+  
+}
+.footerDiv div:nth-child(1){
+padding:10px;
+}
+.footerDiv div:nth-child(2){
+padding: 10px;
+
+}
+.footerCenterDiv{
+  margin-right: auto;margin-left:auto;display: flex;
+}
+.footerDiv li{
+  list-style-type: square;
+}
+.credentialDrop{
+   display: none;
+    position:absolute;
+}
+.publicationDropDown{
+    display: none;
+    position:absolute;
+}
+
+ul.drop{
+    padding: 5px;
+    background-color:orangered;
+    
+    
+}
+
+li{
+    list-style-type: none;
+}
+.menuButton{
+    background-color: rgb(58, 32, 63);
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    display: none;
+    top: 5px;
+   
+}
+#menuClose{
+   background-color:black;display: none;
+    cursor:pointer;position: absolute;right: 0px;top:0px;height: 40px;
+}
+
+.headDiv{
+   margin-left: 10%;
+}
+.hireMe{
+   background-color:rgb(5, 1, 34);color:
+     white;font-size: 15px;
+     overflow: hidden;
+     text-align: center;   
+    margin-right: auto;
+    margin-left: auto; 
+    position: relative;
+    margin-bottom: 0px;
+    height: 30px;
+    width: 60%; 
+    transition: height 1s linear; 
+      border: none;
+}
+
+#hire{
+    display: block;
+    background-color: red;
+    width:100px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+textarea {
+  
+  height: 100px;
+  padding: 5px 5px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8; 
+  font-size: 12px;
+  resize: none;
+  width: 100%; 
+  color:black; 
+}
+input[type="email"]{
+    margin-bottom: 10px;
+    font-size:12px;
+    width: 80%;
+}
+
+input[type="text"]{
+    margin-bottom: 10px;
+    font-size:12px;  
+    width: 80%;
+}
+form{ 
+  color: black;
+  background-color: rgb(14, 81, 104);
+  padding: 10px; 
+  visibility: hidden; 
+  position:absolute; 
+ 
+
+  
+}
+#close{
+    background-color: rgb(196, 196, 214);
+    width:50px;
+   color: black;
+   display: none;
+}
+#close:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px){
+
+a{
+    color: white
+}
+a:hover{
+    background-color: orangered;
+    width: 100%;
+    text-decoration: none;
+    padding: 5px;
+}
+section{
+    padding: 10px;
+}
+section div{
+    display: block;
+}
+.sectionDiv{
+    margin: 0px;
+    width: 100%;
+}
+.sectionDiv2{
+    margin: 0px;
+    width: 100%;
+}
+.hireMe{
+    width: 95%;
+}
+
+}
+@media screen and (max-width:449px){
+    .menuButton{ 
+    display: block;
+    left:3px;
+
+}
+.headDiv{
+    margin-left: 0px; 
+    display: block;
+    background-color: black;
+    position: absolute;
+    left:2px;
+    top:2px;
+    height: 100%;
+    width: 40%;
+    display: none;
+    
+}
+
+h3, h4,section{
+    font-size: 15px;
+}
+
+
+
+}
+@media screen and (min-width:450px){
+.menuButton{
+    display: none;
+
+}
+.headDiv{
+    display: flex;
+}
+a{
+    color: white;
+    
+}
+header:nth-child(1) a:hover{
+    background-color: orangered;
+    width: 100%;
+    text-decoration: none;
+    padding: 5px;
+}
+h3, h4,section{
+    font-size: 15px;
+}
+
+}
+@media screen and (max-width:700px){
+
+    .hireMe{
+    width: 90%;
+
+}
+.footerDiv{
+    display: block;
+}
+
+
+}
+
+@media screen and (max-width:450px){
+
+.hireMe{
+width: 100%;
+}
+
+}
+@media screen and (max-width:850px){
+.sectionDiv2{
+    display: block;
+}
+
+}
+@media screen and (min-width:1281px){
+
+
+}
+
+
+</style>
+</head>
+<body>
+<header>
+<div class="headDiv">
+      <div >
+
+            <div  style="margin-right: 10px;background-color: orangered;padding: 5px;"><a href="#">Home</a></div>
+            <i id="menuClose" class="fa fa-close fa-2x"     ></i>
+
+      </div> 
+        <div  style="margin-right: 10px;padding: 5px" >
+        
+            <a href="https://drive.google.com/file/d/1dfvf2D9c1W2W_0NMPdyJEKEyDVVPg9La/view?usp=sharing">Resume</a>
+       
+            
+             
+        </div>
+        <div style="margin-right: 10px;padding: 5px"><a href="#">Profile</a></div>
+        <div style="padding: 5px"><a id="publication" class="fa fa-caret-down">Publications</a>
+        <div class="publicationDropDown">
+               
+            <ul class="drop">
+                <li style="font-size: 15px"><a href=" http://anale-informatica.tibiscus.ro/download/lucrari/17-2-35-Olaniyan.pdf">Automatic fire alarm system using GSM Module</a></li><hr>
+                <li style="font-size: 15px"><a href="https://www.ijipc.com.ng/index.php/ijipc/article/view/437/224">Digital walking stick for the visually impaired</a></li>
+            </ul>
+        </div>
+        
+        </div> 
+
+</div>
+
+    <button class="menuButton "><i  class=" fa fa-th" ></i></button>
+<div>
+    <a  href="www.facebook.com"><button class=" fa fa-linkedin" style="float:right;background-color:rgb(54, 11, 207);position: absolute;right: 50px;"></button></a>
+    <a  href="www.facebook.com"><button class=" fa fa-github" style="float:right;background-color:black;position: absolute;right: 10px;"></button></a>
+</div>
+   
+    
+</header>
+<section>
+<div class="sectionDiv">
+        <h3 style="text-align: center;margin-right: 10%;margin-left: 10%;background-color: rgb(58, 32, 63);color: white;border-radius: 10px">SOFTWARE DEVELOPER & HARDWARE ENGINEER</h3>
+        <p style="margin-left: 2%;margin-right:2%">I am a computer engineering graduate that has vast knowledge and hands on experience in frontend development, machine learning, embedded systems, java software programming and database creation and management
+             </p>
+             <div style="overflow: hidden;border:2px solid " >
+                    <img src="Passport.jpg" style="width: 100px;border-radius: 50%;margin-bottom: 30px;">
+                    <div style=" background-color:rgb(86, 96, 99);float:right;padding: 10px;border-radius: 0px 50px; "><h3>Recent Executed Projects</h3>
+                        <ul style="color:rgb(153, 202, 17);padding: 10px;">
+                                <li style="list-style-type: square;">Object tracking and detection with OpenCV</li>
+                                <li style="list-style-type: square;">Customer Churn Prediction Machine Learning Model</li>
+                                <li style="list-style-type: square;">Store Management Software System</li>
+                                   
+                                </ul>
+                    </div>
+            </div>
+        <!--The form field starts here. A button of class "hireMe" is used as container for the form--> 
+             <center>
+                   <div style="margin-top:10px;">
+                
+                        <button class="hireMe" >
+                            
+                                <div id="hire"> HIRE ME</div> 
+                              
+                           
+                               
+                                       <form >  
+                                               <div style="float: left;width: 100px;text-align: left">Email:</div><input type="email"><br>
+                                               <div style="float: left;width: 100px;text-align: left">Job Position:</div><input type="text"><br>
+                                               <div style="float: left;width: 100px;text-align: left">Description:</div><textarea></textarea><br>
+                                               <div style="text-align: center"><input type="submit" value="Submit"></div>
+                                       
+                                               
+                                       </form>
+                                                          
+                                   </button>
+
+                                    <div id="close" >Close</div>
+
+
+                
+                </div> 
+                   
+                   
+                    
+                                  
+
+             </center>
+             
+ </div>   
+ <hr>
+
+            <h3 style="padding:5px;margin-right:auto;margin-left:auto;width:200px; color:white;background-color:rgb(17, 127, 160);border-radius: 10px;text-align: center">My Skillsets</h3>
+
+    
+ <div class="sectionDiv2" >
+     
+    
+    <!--left block starts here-->
+    <div id="green">
+                
+    
+        <div class="frontend " >Frontend Development <i class="fa fa-caret-down" style="float: right;margin-right:5px;"></i> 
+
+            <!--container that appears and disappears when toggling front development container-->
+            <div class="frontendDiv">
+
+                    <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                        <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">HTML</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:95%;text-align: center;color: white;height: 15px;font-size:12px">95%</div>   </div>
+                    </div>
+                
+                    <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                        <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">CSS</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:90%;text-align: center;color: white;height: 15px;font-size:12px">90%</div>   </div>
+                    </div>
+                
+                    <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                            <div style="margin-right: 10px;width:70px"><b style="font-size: 12px">Bootstrap</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:80%;text-align: center;color: white;height: 15px;font-size:12px">80%</div>   </div>
+                    </div>
+                
+                        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                            <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Reacts</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:40%;text-align: center;color: white;height: 15px;font-size:12px">40%</div>   </div>
+                        </div>
+                            
+            </div>
+    
+    
+        </div><!--frontend ends here-->
+
+
+    <!--Backend starts here-->
+<div class="frontend">Backend development <i class="fa fa-caret-down" style="float: right;margin-right:5px;"></i>
+    
+        <div class="frontendDiv" >
+
+                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                    <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">Node.js</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:50%;text-align: center;color: white;height: 15px;font-size:12px">50%</div>   </div>
+                </div>
+            
+                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                    <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">PHP</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:45%;text-align: center;color: white;height: 15px;font-size:12px">40%</div>   </div>
+                </div>
+            
+                
+                        
+        </div>
+    
+</div>  <!--backend ends here-->
+
+
+
+
+<!--database starts here-->
+<div class="frontend">Database <i class="fa fa-caret-down" style="float: right;margin-right:5px;"></i>
+
+        <div class="frontendDiv" >
+
+                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                    <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">MySQL</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:50%;text-align: center;color: white;height: 15px;font-size:12px">50%</div>   </div>
+                </div>
+            
+                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                    <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Mongodb</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:45%;text-align: center;color: white;height: 15px;font-size:12px">40%</div>   </div>
+                </div>
+            
+                
+                        
+        </div>
+
+</div>  <!--database ends here--> 
+
+<!--software--> 
+<div class="frontend">Software development    <i class="fa fa-caret-down" style="float: right;margin-right:5px;"></i>
+    <div class="frontendDiv" >
+
+        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+            <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">Java</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:75%;text-align: center;color: white;height: 15px;font-size:12px">75%</div>   </div>
+        </div>
+    
+        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+            <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Python</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:80%;text-align: center;color: white;height: 15px;font-size:12px">80%</div>   </div>
+        </div>
+    
+        
+                
+    </div>
+    
+</div><!--software ends-->
+</div>
+
+ <!--Left block ends here-->
+
+
+ <!--right block starts here-->
+
+<div id="green">
+
+
+
+
+        <div  class="frontend">Machine Learning<!--Machine Learning--><i class="fa fa-caret-down" style="float: right;margin-right:5px;"></i>
+                <div class="frontendDiv" >
+
+                        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                            <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">Regression</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:85%;text-align: center;color: white;height: 15px;font-size:12px">85%</div>   </div>
+                        </div>
+                    
+                        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                            <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Classification</b></div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:90%;text-align: center;color: white;height: 15px;font-size:12px">90%</div>   </div>
+                        </div>
+                    
+                        
+                                
+                    </div>
+
+
+
+
+        </div>
+
+        <div class="frontend">Embedded Systems <!--Embedded Systems--><i class="fa fa-caret-down" style="float: right;margin-right:5px;"></i>
+        
+                <div class="frontendDiv" >
+
+                        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                            <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">Arduino</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:95%;text-align: center;color: white;height: 15px;font-size:12px">95%</div>   </div>
+                        </div>
+                    
+                       <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                            <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">RaspberryPI</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:50%;text-align: center;color: white;height: 15px;font-size:12px">50%</div>   </div>
+                        </div>
+                        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                                <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">PIC</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:35%;text-align: center;color: white;height: 15px;font-size:12px">35%</div>   </div>
+                            </div>
+                        
+                                
+                    </div>
+        </div>  
+
+        <div class="frontend">Cloud Computing<!--cloud computing starts here--><i class="fa fa-caret-down" style="float: right;margin-right:5px;"></i>
+            <div class="frontendDiv" >
+
+                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                    <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">Azure</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:55%;text-align: center;color: white;height: 15px;font-size:12px">55%</div>   </div>
+                </div>
+            
+               <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                    <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Oracle</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:60%;text-align: center;color: white;height: 15px;font-size:12px">60%</div>   </div>
+                </div>
+                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                        <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Aws</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:35%;text-align: center;color: white;height: 15px;font-size:12px">35%</div>   </div>
+                    </div>
+                             
+            </div>
+        
+        </div> <!--end of cloud computing--> 
+
+        <div class="frontend">Analytics <i class="fa fa-caret-down" style="float: right;margin-right:5px;"></i>
+        
+            <div class="frontendDiv" >
+
+                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                    <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">POWER BI</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:40%;text-align: center;color: white;height: 15px;font-size:12px">40%</div>   </div>
+                </div>
+            
+               <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                    <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Excel</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:60%;text-align: center;color: white;height: 15px;font-size:12px">60%</div>   </div>
+                </div>
+                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                        <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Python</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:70%;text-align: center;color: white;height: 15px;font-size:12px">70%</div>   </div>
+                    </div>
+        
+        
+        </div>   
+    
+    
+    </div> <!--end of analytics-->
+                
+    
+
+
+     
+</div> 
+<hr>
+
+</section>
+<hr>
+<footer>
+<div class="footerDiv" >
+  
+    
+    
+        
+            <div style="margin-right: auto;margin-left:auto">
+                <h3 style="background-color:white;color:black;border-radius: 5px;text-align: center; ">CONTACT ADDRESS:</h3>
+                   <div><i class="fa fa-map-marker" style="margin-right: 5px;margin-top: 5px"></i>Lagos, Osun</div>
+                   <div><i class="fa fa-phone" style="margin-right: 5px;margin-top: 5px"></i>(+234) 8136 058 813</div>
+                   <div><i class="fa fa-envelope" style="margin-right: 5px;margin-top: 5px"></i>Kazeemsaheed49@gmail.com</div>
+            
+               </div>
+               
+               <div  >
+                    <h3 style="text-align: center;font-size: 20px">Certifications</h3>
+                    <ul style="padding: 10px;">
+            <li >Data Science Nigeria Artificial Intelligence Bootcamp Certification of completion</li>
+            <li>Modernize Data Management XWeek PreSales Specialist</li>
+            <li>Oracle analytics cloud platform Sales specialist</li>
+            <li>Oracle Autonomous Database for Sales</li>
+            <li>Oracle HCM cloud 2019 solution engineer specialist assessment</li>
+            <li>Oracle Data Management Cloud Platform 2020 Specialist etc</li>
+                    </ul>
+                </div>
+    
+    
+  
+   
+        
+
+
+
+
+</div>
+                             
+<p style="background-color: orangered; text-align: center">Designed by SkITech (C 2021)</p>           
+            
+   
+</footer>
+
+
+<script>
+//Header dropdown effects start here
+
+var dropdown2 = document.getElementsByClassName("publicationDropDown");
+var publication =document.getElementById("publication");
+publication.addEventListener("mouseover",showDropDown2);
+publication.addEventListener("mouseleave",hideDropDown2);
+dropdown2[0].addEventListener("mouseover",showDropDown2);
+dropdown2[0].addEventListener("mouseleave",hideDropDown2);
+
+function showDropDown2(){
+dropdown2[0].style.display="block";  
+ 
+}
+function hideDropDown2(){ 
+    dropdown2[0].style.display="none"; 
+
+}
+//Js code onclicking "hireme" start here
+var forms= document.getElementsByTagName("form");
+var hire = document.getElementsByClassName("hireMe");
+var hireDiv = document.getElementById("hire");
+var sectionDiv = document.getElementsByClassName("sectionDiv");
+var close = document.getElementById("close");
+hire[0].addEventListener("click",showForm);
+
+close.addEventListener("click",hideForm);
+
+var width,height;
+function showForm(){
+    
+    forms[0].style.visibility="visible";  
+    hireDiv.style.display="none";
+    hire[0].style.backgroundColor="lightgrey";  
+    forms[0].style.position="relative";  
+  
+    close.style.display="block";
+
+    var height=forms[0].clientHeight;
+    height=`${height +10}px`;
+    hire[0].style.height=height;   
+    
+    
+     
+    
+}
+
+function hideForm(){
+    forms[0].style.position="absolute";
+    forms[0].style.visibility="hidden"
+    hireDiv.style.display="block"; 
+    hire[0].style.backgroundColor="rgb(5, 1, 34)";
+    hire[0].style.margin="0px";
+    hire[0].style.height="25px";  
+    
+    close.style.display="none";
+}
+
+//js code for menuButton use to show header items start here
+
+var menuBar = document.getElementsByClassName("menuButton"); 
+var headDiv = document.getElementsByClassName("headDiv");
+var cancel = document.getElementById("menuClose");
+cancel.addEventListener("click",hideHeadDiv);
+menuBar[0].addEventListener("click",showHeadDiv);
+function showHeadDiv(){
+
+headDiv[0].style.display="block";
+cancel.style.display="block"
+ menuBar[0].style.display="none"; 
+}
+function hideHeadDiv(){
+
+headDiv[0].style.display="none";
+menuBar[0].style.display="block"; 
+} 
+
+
+
+
+;
+//document.getElementsByClassName("frontend")[0].addEventListener("click", clickeds);
+var index1=0;
+var index2=0;
+var index3=0;
+var index4=0;
+var index5=0;
+var index6=0;
+var index7=0;
+var index8=0;
+
+//frontend development
+var frontendDiv=document.getElementsByClassName("frontendDiv"); 
+document.getElementsByClassName("frontend")[0].onclick = function(){
+    if(index1==0){
+    frontendDiv[0].style.display="block"; 
+    var newHeight=frontendDiv[0].clientHeight +20;  
+    document.getElementsByClassName("frontend")[0].style.height=`${newHeight}px`;
+    index1 +=1;  
+ }
+ else{
+  
+    frontendDiv[0].style.display="none"; 
+    document.getElementsByClassName("frontend")[0].style.height="20px";
+  index1 =0;  
+ }  
+}
+
+//backend development
+document.getElementsByClassName("frontend")[1].onclick = function(){
+    
+    if(index2==0){
+    frontendDiv[1].style.display="block"  
+    var newHeight=frontendDiv[1].clientHeight +20;  
+    document.getElementsByClassName("frontend")[1].style.height=`${newHeight}px`;
+    index2 +=1;
+ }
+ else{
+    frontendDiv[1].style.display="none";
+    document.getElementsByClassName("frontend")[1].style.height="20px";
+    index2 =0;  
+ }  
+
+};
+
+//database
+document.getElementsByClassName("frontend")[2].onclick = function(){
+    
+    if(index3==0){
+    frontendDiv[2].style.display="block"  
+    var newHeight=frontendDiv[2].clientHeight +20;  
+    document.getElementsByClassName("frontend")[2].style.height=`${newHeight}px`;
+    index3 +=1;
+ }
+ else{
+    frontendDiv[2].style.display="none";
+    document.getElementsByClassName("frontend")[2].style.height="20px";
+    index3 =0;  
+ }  
+
+};
+//database
+
+
+//software
+document.getElementsByClassName("frontend")[3].onclick = function(){
+    
+    if(index4==0){
+    frontendDiv[3].style.display="block"  
+    var newHeight=frontendDiv[3].clientHeight +20;  
+    document.getElementsByClassName("frontend")[3].style.height=`${newHeight}px`;
+    index4 +=1;
+ }
+ else{
+    frontendDiv[3].style.display="none";
+    document.getElementsByClassName("frontend")[3].style.height="20px";
+    index4 =0;  
+ }  
+
+};
+//software
+
+
+//Machine Learning
+document.getElementsByClassName("frontend")[4].onclick = function(){
+    
+    if(index5==0){
+    frontendDiv[4].style.display="block"  
+    var newHeight=frontendDiv[4].clientHeight +20;  
+    document.getElementsByClassName("frontend")[4].style.height=`${newHeight}px`;
+    index5 +=1;
+ }
+ else{
+    frontendDiv[4].style.display="none";
+    document.getElementsByClassName("frontend")[4].style.height="20px";
+    index5 =0;  
+ }  
+
+};
+//Learning
+
+//Embedded systems
+document.getElementsByClassName("frontend")[5].onclick = function(){
+    
+    if(index6==0){
+    frontendDiv[5].style.display="block"  
+    var newHeight=frontendDiv[5].clientHeight +20;  
+    document.getElementsByClassName("frontend")[5].style.height=`${newHeight}px`;
+    index6 +=1;
+ }
+ else{
+    frontendDiv[5].style.display="none";
+    document.getElementsByClassName("frontend")[5].style.height="20px";
+    index6 =0;  
+ }  
+
+};
+//Embedded systems ends here
+
+
+//cloud starts here
+document.getElementsByClassName("frontend")[6].onclick = function(){
+    
+    if(index7==0){
+    frontendDiv[6].style.display="block"  
+    var newHeight=frontendDiv[6].clientHeight +20;  
+    document.getElementsByClassName("frontend")[6].style.height=`${newHeight}px`;
+    index7 +=1;
+ }
+ else{
+    frontendDiv[6].style.display="none";
+    document.getElementsByClassName("frontend")[6].style.height="20px";
+    index7 =0;  
+ }  
+
+};
+//cloud end here
+
+
+document.getElementsByClassName("frontend")[7].onclick = function(){
+    
+    if(index8==0){
+    frontendDiv[7].style.display="block"  
+    var newHeight=frontendDiv[7].clientHeight +20;  
+    document.getElementsByClassName("frontend")[7].style.height=`${newHeight}px`;
+    index8 +=1;
+ }
+ else{
+    frontendDiv[7].style.display="none";
+    document.getElementsByClassName("frontend")[7].style.height="20px"; 
+    index8 =0;  
+ }  
+
+};//end of analytics
+
+
+</script>
+</body>
+
+<!--
+
+ 
+-->
+
+</html>
