@@ -8,24 +8,37 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
 <style>
 
 header{
-    background-color: rgb(58, 32, 63);
+    background-color:rgb(5, 1, 34);
     color: white;
     display:flex;
     overflow: hidden;
     padding: 25px;
-    font-family: Cambria;
+    font-family: Serif;
     font-size: 20px
 }
+a{
+    color: white;
+    
+}
+header:nth-child(1) a:hover{
+    background-color: white; 
+    width: 100%;
+    text-decoration: none;
+    padding: 5px;
+}
+
 section{
     font-size: 15px;
     font-family: Arial;
-    background-image: url("https://github.com/Kash5794/Kash5794.github.io/blob/master/background1.jpg?raw=true") ;
     padding: 20px;
     background-size: cover;
     
@@ -45,19 +58,21 @@ h3, h4,p,div{
 
 .sectionDiv{
     
-color:white;
+color:black;
 margin-top: 20px;
 margin-left:10%;margin-right:10%;
 padding:20px;text-align: justify; 
-box-shadow: 5px 5px 5px 5px black;  
+border-bottom: 1px solid black;
+ 
 
 }
+
 
 .sectionDiv2{
 margin-left:10%;margin-right:10%;margin-top: 20px;
  padding:20px;
- background-color: rgb(237, 242, 243);
- box-shadow: 3px 3px 3px 3px black;
+ background-color: white;
+ box-shadow: 2px 2px 2px 2px black;
  border-radius: 10px;
 color: white;
 display: flex;
@@ -67,7 +82,7 @@ display: flex;
     
 width: 300px;
 height: 20px;
- background-color:rgb(58, 126, 143);
+ background-color:rgb(5, 1, 34);
  text-align: center;
  margin-bottom: 20px;
  margin-bottom: 20px; 
@@ -89,9 +104,9 @@ color: white;margin-left:10%;margin-top: 50px;
 }
 
 footer{
-   background-color:rgb(5, 1, 34);
+    background-color:rgb(5, 1, 34);
     font-size: 10px;
-    font-family: Cambria;
+    font-family: Serif;
     color: white;
 
     
@@ -129,7 +144,7 @@ padding: 10px;
 
 ul.drop{
     padding: 5px;
-    background-color:orangered;
+   background-color:rgb(5, 1, 34);
     
     
 }
@@ -155,7 +170,7 @@ li{
    margin-left: 10%;
 }
 .hireMe{
-   background-color:rgb(5, 1, 34);color:
+   background-color:white;color:
      white;font-size: 15px;
      overflow: hidden;
      text-align: center;   
@@ -171,11 +186,12 @@ li{
 
 #hire{
     display: block;
-    background-color: red;
+    background-color:rgb(5, 1, 34);
     width:100px;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
+    box-shadow: 2px 2px 2px 2px black;
 }
 textarea {
   
@@ -201,9 +217,12 @@ input[type="text"]{
     font-size:12px;  
     width: 80%;
 }
+input[type="submit"]{
+   color: rgb(5, 1, 34);
+}
 form{ 
-  color: black;
-  background-color: rgb(14, 81, 104);
+  color: white;
+  background-color:rgb(5, 1, 34);
   padding: 10px; 
   visibility: hidden; 
   position:absolute; 
@@ -220,8 +239,20 @@ form{
 #close:hover{
     cursor: pointer;
 }
+.gallery{
+  margin-top:50px;width: 400px;
+  margin-right: auto;
+    margin-left: auto;text-align: center;
+    box-shadow:  3px 3px 3px 2px black;
+}
 
 @media screen and (max-width:600px){
+    .gallery img{
+    width: 100%;
+}
+.gallery {
+    width: 90%;
+}
 
 a{
     color: white
@@ -276,6 +307,7 @@ h3, h4,section{
 
 
 
+
 }
 @media screen and (min-width:450px){
 .menuButton{
@@ -285,16 +317,7 @@ h3, h4,section{
 .headDiv{
     display: flex;
 }
-a{
-    color: white;
-    
-}
-header:nth-child(1) a:hover{
-    background-color: orangered;
-    width: 100%;
-    text-decoration: none;
-    padding: 5px;
-}
+
 h3, h4,section{
     font-size: 15px;
 }
@@ -339,7 +362,7 @@ width: 100%;
 <div class="headDiv">
       <div >
 
-            <div  style="margin-right: 10px;background-color: orangered;padding: 5px;"><a href="#">Home</a></div>
+            <div  style="margin-right: 10px;background-color: white;padding: 5px;"><a style="color: black"href="#">Home</a></div>
             <i id="menuClose" class="fa fa-close fa-2x"     ></i>
 
       </div> 
@@ -366,21 +389,28 @@ width: 100%;
 
     <button class="menuButton "><i  class=" fa fa-th" ></i></button>
 <div>
-    <a  href="https://www.linkedin.com/in/kazeem-saheed-145284156/"><button class=" fa fa-linkedin" style="float:right;background-color:rgb(54, 11, 207);position: absolute;right: 50px;"></button></a>
-    <a  href="https://github.com/Kash5794"><button class=" fa fa-github" style="float:right;background-color:black;position: absolute;right: 10px;"></button></a>
+    <a  href="www.facebook.com"><button class=" fa fa-linkedin" style="float:right;background-color:rgb(54, 11, 207);position: absolute;right: 50px;"></button></a>
+    <a  href="www.facebook.com"><button class=" fa fa-github" style="float:right;background-color:black;position: absolute;right: 10px;"></button></a>
 </div>
    
     
-</header>
+</header> 
 <section>
 <div class="sectionDiv">
-        <h3 style="text-align: center;margin-right: 10%;margin-left: 10%;background-color: rgb(58, 32, 63);color: white;border-radius: 10px">SOFTWARE DEVELOPER & HARDWARE ENGINEER</h3>
-        <p style="margin-left: 2%;margin-right:2%">I am a computer engineering graduate that has vast knowledge and hands on experience in frontend development, machine learning, embedded systems, java software programming and database creation and management
-             </p>
-             <div style="overflow: hidden;border:2px solid " >
-                    <img src="https://github.com/Kash5794/Kash5794.github.io/blob/master/Passport.JPG?raw=true" style="width: 100px;border-radius: 50%;margin-bottom: 30px;">
+        <h3 style="text-align: center;margin-right: 10%;margin-left: 10%;color:  rgb(58, 32, 63);border-radius: 10px"><b>Software Developer | Hardware Engineer</b></h3>
+        <div  >
+                <img src="Passport.jpg" style="width: 100px;border-radius: 50%;margin-bottom: 30px;shape-outside: circle(50%);float: left">
+            I am a computer engineering graduate that has vast knowledge and hands on experience in frontend development, machine learning, embedded systems, java software programming and database creation and management
+        </div>
+    
+            <!--
+
+
+
+<div style="overflow: hidden;border:2px solid " >
+                   
                     <div style=" background-color:rgb(86, 96, 99);float:right;padding: 10px;border-radius: 0px 50px; "><h3>Recent Executed Projects</h3>
-                        <ul style="color:rgb(153, 202, 17);padding: 10px;">
+                        <ul style="padding: 10px;">
                                 <li style="list-style-type: square;">Object tracking and detection with OpenCV</li>
                                 <li style="list-style-type: square;">Customer Churn Prediction Machine Learning Model</li>
                                 <li style="list-style-type: square;">Store Management Software System</li>
@@ -388,6 +418,9 @@ width: 100%;
                                 </ul>
                     </div>
             </div>
+
+            -->
+             
         <!--The form field starts here. A button of class "hireMe" is used as container for the form--> 
              <center>
                    <div style="margin-top:10px;">
@@ -398,11 +431,11 @@ width: 100%;
                               
                            
                                
-                                       <form >  
-                                               <div style="float: left;width: 100px;text-align: left">Email:</div><input type="email"><br>
-                                               <div style="float: left;width: 100px;text-align: left">Job Position:</div><input type="text"><br>
-                                               <div style="float: left;width: 100px;text-align: left">Description:</div><textarea></textarea><br>
-                                               <div style="text-align: center"><input type="submit" value="Submit"></div>
+                                       <form method="POST">
+                                               <div style="float: left;width: 100px;text-align: left">Email:</div><input type="email" id="email"><br>
+                                               <div style="float: left;width: 100px;text-align: left">Job Position:</div><input type="text" id="position"><br>
+                                               <div style="float: left;width: 100px;text-align: left">Description:</div><textarea id="message" ></textarea><br>
+                                               <div style="text-align: center"><input type="submit" value="Submit" onclick="sendEmail()"></div>
                                        
                                                
                                        </form>
@@ -419,16 +452,47 @@ width: 100%;
                     
                                   
 
-             </center>
+           
+            </center>
+
+
+
+
+            <h3 style="margin-top:100px;padding:5px;width:90%; color:rgb(5, 1, 34);border-radius: 10px;"><B>My skills in pictures..............</B></h3>
+            
+            <div class="gallery" >
              
+
+                    <img src="Coding2.jpg" style="max-width: 400px;"> <p>Programming</p>
+                         
+                  
+            </div>
+            <div class="gallery">
+                <img src="AI2.jpg" style="max-width: 400px;"> <p >Artificial Intelligence</p>
+            
+            
+        </div>
+            <div class="gallery" >
+             
+
+                    <div style="margin-right: 50px" ><img src="Cloud2.jpg" style="max-width: 400px;"> <p>Cloud Computing</p></div>
+                    
+            </div>
+            <div class="gallery">
+                 <img src="Embedded.jpg" style="max-width: 400px;"> <p>Embedded Systems Design</p>
+            
+            </div>
+                    
+                   
  </div>   
- <hr>
 
-            <h3 style="padding:5px;margin-right:auto;margin-left:auto;width:200px; color:white;background-color:rgb(17, 127, 160);border-radius: 10px;text-align: center">My Skillsets</h3>
 
+             
+            
+            
     
  <div class="sectionDiv2" >
-     
+     <div style="color: black;margin-bottom: 50px"><b>Proficiency Levels</b></div>
     
     <!--left block starts here-->
     <div id="green">
@@ -439,19 +503,19 @@ width: 100%;
             <!--container that appears and disappears when toggling front development container-->
             <div class="frontendDiv">
 
-                    <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                    <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                         <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">HTML</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:95%;text-align: center;color: white;height: 15px;font-size:12px">95%</div>   </div>
                     </div>
                 
-                    <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                    <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                         <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">CSS</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:90%;text-align: center;color: white;height: 15px;font-size:12px">90%</div>   </div>
                     </div>
                 
-                    <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                    <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                             <div style="margin-right: 10px;width:70px"><b style="font-size: 12px">Bootstrap</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:80%;text-align: center;color: white;height: 15px;font-size:12px">80%</div>   </div>
                     </div>
                 
-                        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                        <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                             <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Reacts</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:40%;text-align: center;color: white;height: 15px;font-size:12px">40%</div>   </div>
                         </div>
                             
@@ -466,11 +530,11 @@ width: 100%;
     
         <div class="frontendDiv" >
 
-                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                     <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">Node.js</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:50%;text-align: center;color: white;height: 15px;font-size:12px">50%</div>   </div>
                 </div>
             
-                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                     <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">PHP</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:45%;text-align: center;color: white;height: 15px;font-size:12px">40%</div>   </div>
                 </div>
             
@@ -488,11 +552,11 @@ width: 100%;
 
         <div class="frontendDiv" >
 
-                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                     <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">MySQL</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:50%;text-align: center;color: white;height: 15px;font-size:12px">50%</div>   </div>
                 </div>
             
-                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                     <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Mongodb</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:45%;text-align: center;color: white;height: 15px;font-size:12px">40%</div>   </div>
                 </div>
             
@@ -506,11 +570,11 @@ width: 100%;
 <div class="frontend">Software development    <i class="fa fa-caret-down" style="float: right;margin-right:5px;"></i>
     <div class="frontendDiv" >
 
-        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+        <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
             <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">Java</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:75%;text-align: center;color: white;height: 15px;font-size:12px">75%</div>   </div>
         </div>
     
-        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+        <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
             <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Python</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:80%;text-align: center;color: white;height: 15px;font-size:12px">80%</div>   </div>
         </div>
     
@@ -534,11 +598,11 @@ width: 100%;
         <div  class="frontend">Machine Learning<!--Machine Learning--><i class="fa fa-caret-down" style="float: right;margin-right:5px;"></i>
                 <div class="frontendDiv" >
 
-                        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                        <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                             <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">Regression</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:85%;text-align: center;color: white;height: 15px;font-size:12px">85%</div>   </div>
                         </div>
                     
-                        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                        <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                             <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Classification</b></div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:90%;text-align: center;color: white;height: 15px;font-size:12px">90%</div>   </div>
                         </div>
                     
@@ -555,14 +619,14 @@ width: 100%;
         
                 <div class="frontendDiv" >
 
-                        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                        <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                             <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">Arduino</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:95%;text-align: center;color: white;height: 15px;font-size:12px">95%</div>   </div>
                         </div>
                     
-                       <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                       <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                             <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">RaspberryPI</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:50%;text-align: center;color: white;height: 15px;font-size:12px">50%</div>   </div>
                         </div>
-                        <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                        <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                                 <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">PIC</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:35%;text-align: center;color: white;height: 15px;font-size:12px">35%</div>   </div>
                             </div>
                         
@@ -573,14 +637,14 @@ width: 100%;
         <div class="frontend">Cloud Computing<!--cloud computing starts here--><i class="fa fa-caret-down" style="float: right;margin-right:5px;"></i>
             <div class="frontendDiv" >
 
-                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                     <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">Azure</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:55%;text-align: center;color: white;height: 15px;font-size:12px">55%</div>   </div>
                 </div>
             
-               <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+               <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                     <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Oracle</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:60%;text-align: center;color: white;height: 15px;font-size:12px">60%</div>   </div>
                 </div>
-                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                         <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Aws</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:35%;text-align: center;color: white;height: 15px;font-size:12px">35%</div>   </div>
                     </div>
                              
@@ -592,14 +656,14 @@ width: 100%;
         
             <div class="frontendDiv" >
 
-                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                     <div style="margin-right: 10px;width:105px;"><b style="font-size: 12px">POWER BI</b>  </div> <div style="width: 100%;height:15px;background-color:white;">    <div style="background-color: rgb(3, 19, 73);width:40%;text-align: center;color: white;height: 15px;font-size:12px">40%</div>   </div>
                 </div>
             
-               <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+               <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;;padding: 2px;">
                     <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Excel</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:60%;text-align: center;color: white;height: 15px;font-size:12px">60%</div>   </div>
                 </div>
-                <div style="text-align: left;display: flex;background-color: rgb(154, 178, 179);color: black;padding: 2px;">
+                <div style="text-align: left;display: flex;background-color: rgb(5, 1, 34);color: white;padding: 2px;">
                         <div style="margin-right: 10px;width:105px"><b style="font-size: 12px">Python</b></div> <div style="width: 100%;height:15px;background-color:white;color: orangered">    <div style="background-color: rgb(3, 19, 73);width:70%;text-align: center;color: white;height: 15px;font-size:12px">70%</div>   </div>
                     </div>
         
@@ -654,7 +718,7 @@ width: 100%;
 
 </div>
                              
-<p style="background-color: orangered; text-align: center">Designed by SkITech (C 2021)</p>           
+<p style=" text-align: center">Designed by SkITech (C 2021)</p>           
             
    
 </footer>
@@ -711,7 +775,7 @@ function hideForm(){
     forms[0].style.position="absolute";
     forms[0].style.visibility="hidden"
     hireDiv.style.display="block"; 
-    hire[0].style.backgroundColor="rgb(5, 1, 34)";
+    hire[0].style.backgroundColor="white";
     hire[0].style.margin="0px";
     hire[0].style.height="25px";  
     
@@ -896,11 +960,47 @@ document.getElementsByClassName("frontend")[7].onclick = function(){
 };//end of analytics
 
 
+
+
+function sendEmail() {
+    var email = document.getElementById("email").value;
+    var position = document.getElementById("position").value;
+    var message = document.getElementById("message").value;
+      Email.send({
+
+        
+        Host: "smtp.gmail.com",
+        Username: "saheed.kazeem.1665@fuoye.edu.ng",
+        Password: "Understand@65",
+        To: 'kazeemsaheed49@gmail.com',
+        From: "saheed.kazeem.1665@fuoye.edu.ng",
+        Subject: `I WANT TO HIRE YOU FOR ${POSITION} `,
+        Body:  `  ${position}. Reach out to me on  ${email}  !!   `,
+      })
+        .then(function (message) {
+          alert("Successfully sent!! I shall get back to you shortly")
+        });
+    }
+
 </script>
 </body>
 
 <!--
+<div style="display: flex;width: 700px;margin-right: auto;margin-left: auto" >
+             
 
+                    <div style="margin-right: 50px"><img src="Coding2.jpg" style="max-width: 300px;"> <p>Programming</p></div> 
+                    <div ><img src="AI2.jpg" style="max-width: 300px;"> <p>Artificial Intelligence</p></div>
+                    
+                  
+            </div>
+            <div style="display: flex;width: 700px;margin-right: auto;margin-left: auto" >
+             
+
+                    <div style="margin-right: 50px" ><img src="Cloud2.jpg" style="max-width: 300px;"> <p>Cloud Computing</p></div>
+                    <div > <img src="Embedded.jpg" style="max-width: 300px;"> <p>Embedded Systems Design</p></div>
+                  
+            </div>
  
 -->
 
