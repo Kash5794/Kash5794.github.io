@@ -23,7 +23,12 @@ header{
     overflow: hidden;
     padding: 25px;
     font-family: Serif;
-    font-size: 20px
+    font-size: 20px;
+    position: fixed;
+    width: 100%; 
+    top: 0px;
+    
+
 }
 a{
     color: white;
@@ -41,7 +46,7 @@ section{
     font-family: Arial;
     padding: 20px;
     background-size: cover;
-    
+   margin-top: 50px;
     
 }
 h3, h4,p,div{
@@ -62,14 +67,14 @@ color:black;
 margin-top: 20px;
 margin-left:10%;margin-right:10%;
 padding:20px;text-align: justify; 
-border-bottom: 1px solid black;
+
  
 
 }
 
 
 .sectionDiv2{
-margin-left:10%;margin-right:10%;margin-top: 20px;
+margin-left:10%;margin-right:10%;margin-top: 10px;
  padding:20px;
  background-color: white;
  box-shadow: 2px 2px 2px 2px black;
@@ -133,13 +138,10 @@ padding: 10px;
 .footerDiv li{
   list-style-type: square;
 }
-.credentialDrop{
-   display: none;
-    position:absolute;
-}
+
 .publicationDropDown{
     display: none;
-    position:absolute;
+    position:fixed;
 }
 
 ul.drop{
@@ -168,30 +170,23 @@ li{
 
 .headDiv{
    margin-left: 10%;
-}
-.hireMe{
-   background-color:white;color:
-     white;font-size: 15px;
-     overflow: hidden;
-     text-align: center;   
-    margin-right: auto;
-    margin-left: auto; 
-    position: relative;
-    margin-bottom: 0px;
-    height: 30px;
-    width: 60%; 
-    transition: height 1s linear; 
-      border: none;
+   display: flex;
+   width: 278px;
+   transition: width 5s linear,display 5s ease-out;
+   
 }
 
 #hire{
     display: block;
     background-color:rgb(5, 1, 34);
     width:100px;
+    height:20px;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    box-shadow: 2px 2px 2px 2px black;
+    cursor: pointer;
+    color: white;
+    transition: height 1s linear,width 1s linear; 
 }
 textarea {
   
@@ -227,6 +222,7 @@ form{
   visibility: hidden; 
   position:absolute; 
  
+ 
 
   
 }
@@ -240,10 +236,25 @@ form{
     cursor: pointer;
 }
 .gallery{
-  margin-top:50px;width: 400px;
+  margin-top:30px;width: 400px;
   margin-right: auto;
     margin-left: auto;text-align: center;
     box-shadow:  3px 3px 3px 2px black;
+
+}
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
 
 @media screen and (max-width:600px){
@@ -277,9 +288,7 @@ section div{
     margin: 0px;
     width: 100%;
 }
-.hireMe{
-    width: 95%;
-}
+
 
 }
 @media screen and (max-width:449px){
@@ -290,14 +299,18 @@ section div{
 }
 .headDiv{
     margin-left: 0px; 
-    display: block;
-    background-color: black;
-    position: absolute;
+    
+    background-color:rgb(5, 1, 34);
+    position: fixed;
     left:2px;
     top:2px;
-    height: 100%;
-    width: 40%;
+    height: 150px;
+    width: 50%;
     display: none;
+    padding: 10px;
+    border: 2px solid blue;
+    border-radius: 0px 0px 50px 0px;
+    opacity: .8;
     
 }
 
@@ -325,10 +338,7 @@ h3, h4,section{
 }
 @media screen and (max-width:700px){
 
-    .hireMe{
-    width: 90%;
-
-}
+    
 .footerDiv{
     display: block;
 }
@@ -338,9 +348,7 @@ h3, h4,section{
 
 @media screen and (max-width:450px){
 
-.hireMe{
-width: 100%;
-}
+
 
 }
 @media screen and (max-width:850px){
@@ -378,8 +386,8 @@ width: 100%;
         <div class="publicationDropDown">
                
             <ul class="drop">
-                <li style="font-size: 15px"><a href=" http://anale-informatica.tibiscus.ro/download/lucrari/17-2-35-Olaniyan.pdf">Automatic fire alarm system using GSM Module</a></li><hr>
-                <li style="font-size: 15px"><a href="https://www.ijipc.com.ng/index.php/ijipc/article/view/437/224">Digital walking stick for the visually impaired</a></li>
+                <li style="font-size: 15px"><a href=" http://anale-informatica.tibiscus.ro/download/lucrari/17-2-35-Olaniyan.pdf" target="_blank">Automatic fire alarm system using GSM Module</a></li><hr>
+                <li style="font-size: 15px"><a href="https://www.ijipc.com.ng/index.php/ijipc/article/view/437/224" target="_blank">Digital walking stick for the visually impaired</a></li>
             </ul>
         </div>
         
@@ -388,21 +396,26 @@ width: 100%;
 </div>
 
     <button class="menuButton "><i  class=" fa fa-th" ></i></button>
-<div>
-    <a  href="www.facebook.com"><button class=" fa fa-linkedin" style="float:right;background-color:rgb(54, 11, 207);position: absolute;right: 50px;"></button></a>
-    <a  href="www.facebook.com"><button class=" fa fa-github" style="float:right;background-color:black;position: absolute;right: 10px;"></button></a>
+<div> 
+    <a  href="https://www.linkedin.com/in/I-am-kazeem-saheed/" target="_blank"><button class=" fa fa-linkedin" style="float:right;background-color:rgb(54, 11, 207);position: absolute;right: 50px;"></button></a>
+    <a  href="https://www.github.com/kash5794" target="_blank"><button class=" fa fa-github" style="float:right;background-color:rgb(155, 155, 35);position: absolute;right: 10px;"></button></a>
 </div>
    
     
 </header> 
 <section>
 <div class="sectionDiv">
+    <div style="display: flex;">
+            <p style="font-size: 20px" class="fa fa-code"> Meet Saheed <i class="fa fa-code"></i> </p>
+            
+    </div>
+    
         <h3 style="text-align: center;margin-right: 10%;margin-left: 10%;color:  rgb(58, 32, 63);border-radius: 10px"><b>Software Developer | Hardware Engineer</b></h3>
         <div  >
-                <img src="https://github.com/Kash5794/Kash5794.github.io/blob/master/Passport.JPG?raw=true" style="width: 100px;border-radius: 50%;margin-bottom: 30px;shape-outside: circle(50%);float: left">
-            I am a computer engineering graduate that has vast knowledge and hands on experience in frontend development, machine learning, embedded systems, java software programming and database creation and management
+                <img src="Passport.jpg" style="width: 100px;border-radius: 50%;margin-bottom: 30px;shape-outside: circle(50%);float: left">
+            A first class engineering graduate with vast knowledge and hands on experience in frontend development, machine learning, embedded systems, java software programming and database provisioning.
         </div>
-    
+    <div style="clear: both"></div>
             <!--
 
 
@@ -425,9 +438,9 @@ width: 100%;
              <center>
                    <div style="margin-top:10px;">
                 
-                        <button class="hireMe" >
+                        
                             
-                                <div id="hire"> HIRE ME</div> 
+                                <div id="hire"> <p>HIRE ME</p>
                               
                            
                                
@@ -440,7 +453,7 @@ width: 100%;
                                                
                                        </form>
                                                           
-                                   </button>
+                                    </div> 
 
                                     <div id="close" >Close</div>
 
@@ -455,37 +468,38 @@ width: 100%;
            
             </center>
 
+            <p style="width: 100%;border-top:2px solid lightgrey;margin-top:10%"></p>
 
 
 
-            <h3 style="margin-top:100px;padding:5px;width:90%; color:rgb(5, 1, 34);border-radius: 10px;"><B>My skills in pictures..............</B></h3>
+            <h3 style="margin-right: auto;margin-left:auto;margin-top:100px; color:rgb(5, 1, 34); width: 300px;font-size:20px"><B >My skills in pictures<i class="fa fa-arrow-down fa-2x blink" style="margin-left: 20px;color: blue"></i></B></h3>
             
             <div class="gallery" >
              
 
-                    <img src="https://github.com/Kash5794/Kash5794.github.io/blob/master/Coding2.jpg?raw=true" style="max-width: 400px;"> <p>Programming</p>
+                    <img src="Coding2.jpg" style="max-width: 400px;"> <p>Programming</p>
                          
                   
             </div>
             <div class="gallery">
-                <img src="https://github.com/Kash5794/Kash5794.github.io/blob/master/AI2.jpg?raw=true" style="max-width: 400px;"> <p >Artificial Intelligence</p>
+                <img src="AI2.jpg" style="max-width: 400px;"> <p >Artificial Intelligence</p>
             
             
         </div>
             <div class="gallery" >
              
 
-                    <div style="margin-right: 50px" ><img src="https://github.com/Kash5794/Kash5794.github.io/blob/master/Cloud2.jpg?raw=true" style="max-width: 400px;"> <p>Cloud Computing</p></div>
+                    <div style="margin-right: 50px" ><img src="Cloud2.jpg" style="max-width: 400px;"> <p>Cloud Computing</p></div>
                     
             </div>
             <div class="gallery">
-                 <img src="https://github.com/Kash5794/Kash5794.github.io/blob/master/Embedded.jpg?raw=true" style="max-width: 400px;"> <p>Embedded Systems Design</p>
+                 <img src="Embedded.jpg" style="max-width: 400px;"> <p>Embedded Systems Design</p>
             
             </div>
                     
                    
  </div>   
-
+ <p style="width: 100%;border-top:2px solid lightgrey;margin-top:10%;margin-bottom: 30px;"></p>
 
              
             
@@ -718,7 +732,7 @@ width: 100%;
 
 </div>
                              
-<p style=" text-align: center">Designed by SkITech (C 2021)</p>           
+<p style=" text-align: center;background-color: blue">Designed by SkITech (C 2021)</p>           
             
    
 </footer>
@@ -748,37 +762,40 @@ var hire = document.getElementsByClassName("hireMe");
 var hireDiv = document.getElementById("hire");
 var sectionDiv = document.getElementsByClassName("sectionDiv");
 var close = document.getElementById("close");
-hire[0].addEventListener("click",showForm);
+hireDiv.addEventListener("click",showForm);
 
-close.addEventListener("click",hideForm);
+close.addEventListener("click",hideForm); 
 
 var width,height;
 function showForm(){
-    
-    forms[0].style.visibility="visible";  
-    hireDiv.style.display="none";
-    hire[0].style.backgroundColor="lightgrey";  
-    forms[0].style.position="relative";  
+    hireDiv.firstElementChild.innerHTML="";
+     
   
-    close.style.display="block";
-
     var height=forms[0].clientHeight;
     height=`${height +10}px`;
-    hire[0].style.height=height;   
+    hireDiv.style.height=height;   
     
+    forms[0].style.visibility="visible";   
+    forms[0].style.position="relative"; 
     
-     
-    
+    close.style.display="block";
+
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    if (vw < 600){
+        hireDiv.style.width="90%";  
+    }
+    else{
+        hireDiv.style.width="500px"; 
+    }
 }
 
 function hideForm(){
     forms[0].style.position="absolute";
-    forms[0].style.visibility="hidden"
-    hireDiv.style.display="block"; 
-    hire[0].style.backgroundColor="white";
-    hire[0].style.margin="0px";
-    hire[0].style.height="25px";  
-    
+    forms[0].style.visibility="hidden";
+    hireDiv.firstElementChild.innerHTML="HIRE ME";
+    hireDiv.style.height="20px";  
+    hireDiv.style.width="100px"; 
     close.style.display="none";
 }
 
