@@ -32,7 +32,7 @@ console.log("Email Sent")
 
 
 app.get('/', (req, res)=>{//server receiving a get method through route /
-res.sendFile(path.join(__dirname, '../','index.html'));//respond by sending webpage index.html 
+res.sendFile(path.join(__dirname, '','index.html'));//respond by sending webpage index.html 
 });
 
 app.listen(PORT, ()=> log("Server is running on PORT,", 8080));//waiting for call from port 8080
