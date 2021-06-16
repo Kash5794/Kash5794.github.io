@@ -10,7 +10,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
 
-<script src="https://smtpjs.com/v3/smtp.js"></script>
+
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
@@ -205,12 +205,14 @@ input[type="email"]{
     margin-bottom: 10px;
     font-size:12px;
     width: 80%;
+    color:black;
 }
 
 input[type="text"]{
     margin-bottom: 10px;
     font-size:12px;  
     width: 80%;
+    color: black;
 }
 input[type="submit"]{
    color: rgb(5, 1, 34);
@@ -370,7 +372,7 @@ h3, h4,section{
 <div class="headDiv">
       <div >
 
-            <div  style="margin-right: 10px;background-color: white;padding: 5px;"><a style="color: black"href="#">Home</a></div>
+            <div  style="margin-right: 10px;background-color: white;padding: 5px;"><a style="color: black"href="http://kash5794.github.io">Home</a></div> 
             <i id="menuClose" class="fa fa-close fa-2x"     ></i>
 
       </div> 
@@ -412,7 +414,8 @@ h3, h4,section{
     
         <h3 style="text-align: center;margin-right: 10%;margin-left: 10%;color:  rgb(58, 32, 63);border-radius: 10px"><b>Software Developer | Hardware Engineer</b></h3>
         <div  >
-                <img src="https://github.com/Kash5794/Kash5794.github.io/blob/master/Passport.JPG?raw=true" style="width: 100px;border-radius: 50%;margin-bottom: 30px;shape-outside: circle(50%);float: left">
+            
+            <img src="Passport.jpg" style="width: 100px;border-radius: 50%;margin-bottom: 30px;shape-outside: circle(50%);float: left">      
             A first class engineering graduate with vast knowledge and hands on experience in frontend development, machine learning, embedded systems, java software programming and database provisioning.
         </div>
     <div style="clear: both"></div>
@@ -444,18 +447,18 @@ h3, h4,section{
                               
                            
                                
-                                       <form method="POST">
-                                               <div style="float: left;width: 100px;text-align: left">Email:</div><input type="email" id="email"><br>
-                                               <div style="float: left;width: 100px;text-align: left">Job Position:</div><input type="text" id="position"><br>
-                                               <div style="float: left;width: 100px;text-align: left">Description:</div><textarea id="message" ></textarea><br>
-                                               <div style="text-align: center"><input type="submit" value="Submit" onclick="sendEmail()"></div>
+                                       <form >
+                                               <div style="float: left;width: 100px;text-align: left" >Email:</div><input type="email" id="email" required><br>
+                                               <div style="float: left;width: 100px;text-align: left">Subject:</div><input type="text" id="subject" required ><br>
+                                               <div style="float: left;width: 100px;text-align: left">Body:</div><textarea id="message" required></textarea><br>
+                                               <div style="text-align: center"><input type="submit" value="Submit" id="submit"></div>
                                        
                                                
-                                       </form>
+                                       </form> 
                                                           
-                                    </div> 
+                                    </div>  
 
-                                    <div id="close" >Close</div>
+                                    <div id="close" >Close</div> 
 
 
                 
@@ -738,7 +741,10 @@ h3, h4,section{
 </footer>
 
 
-<script>
+
+<script type="text/javascript">
+
+
 //Header dropdown effects start here
 
 var dropdown2 = document.getElementsByClassName("publicationDropDown");
@@ -976,28 +982,33 @@ document.getElementsByClassName("frontend")[7].onclick = function(){
 
 };//end of analytics
 
+</script>
 
 
+<script>
 
-function sendEmail() {
-    var email = document.getElementById("email").value;
-    var position = document.getElementById("position").value;
-    var message = document.getElementById("message").value;
-      Email.send({
+$('form').on('submit', (e)=>{
+e.preventDefault();
 
-        
-        Host: "smtp.gmail.com",
-        Username: "saheed.kazeem.1665@fuoye.edu.ng",
-        Password: "Understand@65",
-        To: 'kazeemsaheed49@gmail.com',
-        From: "saheed.kazeem.1665@fuoye.edu.ng",
-        Subject: `I WANT TO HIRE YOU FOR ${POSITION} `,
-        Body:  `  ${position}. Reach out to me on  ${email}  !!   `,
-      })
-        .then(function (message) {
-          alert("Successfully sent!! I shall get back to you shortly")
-        });
-    }
+const email = $("#email").val().trim();
+
+const text = $("#message").val().trim();
+
+const subject = $("#subject").val().trim();
+
+const data ={
+    email,
+    subject,
+    text
+};
+ 
+$.post('/email', data, function(){
+console.log("server received our data");
+alert("Successfully sent");
+
+});
+
+});
 
 </script>
 </body>
